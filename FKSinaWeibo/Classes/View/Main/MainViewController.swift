@@ -67,6 +67,12 @@ class MainViewController: UITabBarController {
         vc.tabBarItem.image = UIImage(named: imageName)
         vc.tabBarItem.selectedImage = UIImage(named: imageName + "-black")?.withRenderingMode(.alwaysOriginal)
         
+        //设置标题字体
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.black], for: .highlighted)
+        
+        //系统默认12
+//        vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
+        
         let nav = NavigationController(rootViewController: vc)
         
         return nav

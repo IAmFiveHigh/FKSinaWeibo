@@ -8,6 +8,8 @@
 
 import UIKit
 
+let KDarkOrigin: (CGFloat,CGFloat,CGFloat) = (255.0, 140.0, 0)
+
 class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
@@ -20,10 +22,10 @@ class MainViewController: UITabBarController {
     //MARK: 设置所有子控制器
     fileprivate func setupChildControllers() {
         
-        let array = [["clsName": "HomeViewController", "title": "首页", "imageName": ""],
-                     ["clsName": "MessageViewController", "title": "消息", "imageName": ""],
-                     ["clsName": "DiscoverViewController", "title": "发现", "imageName": ""],
-                     ["clsName": "ProfileViewController", "title": "我", "imageName": ""]
+        let array = [["clsName": "HomeViewController", "title": "首页", "imageName": "首页"],
+                     ["clsName": "MessageViewController", "title": "消息", "imageName": "信息"],
+                     ["clsName": "DiscoverViewController", "title": "发现", "imageName": "发现"],
+                     ["clsName": "ProfileViewController", "title": "我", "imageName": "我的"]
                      ]
         
         var ViewControllerArray = [UIViewController]()
@@ -56,11 +58,16 @@ class MainViewController: UITabBarController {
         
         let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? UIViewController.Type
         
-        let vc = cls?.init()
+        let vc = cls!.init()
         
-        vc?.title = title
+        //设置title
+        vc.title = title
         
-        let nav = NavigationController(rootViewController: vc!)
+        //设置icon
+        vc.tabBarItem.image = UIImage(named: imageName)
+        vc.tabBarItem.selectedImage = UIImage(named: imageName + "-black")?.withRenderingMode(.alwaysOriginal)
+        
+        let nav = NavigationController(rootViewController: vc)
         
         return nav
     }

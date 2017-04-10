@@ -24,6 +24,7 @@
 		4649DFFD1E98FB3F0015C1A3 /* 我的.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF51E98FB3F0015C1A3 /* 我的.png */; };
 		4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF61E98FB3F0015C1A3 /* 首页-black.png */; };
 		4649DFFF1E98FB3F0015C1A3 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF71E98FB3F0015C1A3 /* 首页.png */; };
+		46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0861E9B9DF700B2AA34 /* composeButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		4649DFF51E98FB3F0015C1A3 /* 我的.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的.png"; sourceTree = "<group>"; };
 		4649DFF61E98FB3F0015C1A3 /* 首页-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页-black.png"; sourceTree = "<group>"; };
 		4649DFF71E98FB3F0015C1A3 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		46F7F0861E9B9DF700B2AA34 /* composeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = composeButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		4649DFEF1E98FB3F0015C1A3 /* tabbarICON */ = {
 			isa = PBXGroup;
 			children = (
+				46F7F0861E9B9DF700B2AA34 /* composeButton.png */,
 				4649DFF01E98FB3F0015C1A3 /* 信息-black.png */,
 				4649DFF11E98FB3F0015C1A3 /* 信息.png */,
 				4649DFF21E98FB3F0015C1A3 /* 发现-black.png */,
@@ -259,6 +262,7 @@
 				4649DFFC1E98FB3F0015C1A3 /* 我的-black.png in Resources */,
 				4649DFFB1E98FB3F0015C1A3 /* 发现.png in Resources */,
 				4649DFCC1E98E47C0015C1A3 /* Assets.xcassets in Resources */,
+				46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */,
 				4649DFF91E98FB3F0015C1A3 /* 信息.png in Resources */,
 				4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */,
 				4649DFFA1E98FB3F0015C1A3 /* 发现-black.png in Resources */,
@@ -427,6 +431,7 @@
 				4649DFD51E98E47C0015C1A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

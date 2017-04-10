@@ -12,11 +12,20 @@ let KDarkOrigin: (CGFloat,CGFloat,CGFloat) = (255.0, 140.0, 0)
 
 class MainViewController: UITabBarController {
 
+    
+    fileprivate lazy var composeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "composeButton"), for: .normal)
+        button.addTarget(self, action: #selector(composeButtonClick), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupChildControllers()
         
+        setupComposeButton()
     }
 
     //MARK: 设置所有子控制器
@@ -24,6 +33,7 @@ class MainViewController: UITabBarController {
         
         let array = [["clsName": "HomeViewController", "title": "首页", "imageName": "首页"],
                      ["clsName": "MessageViewController", "title": "消息", "imageName": "信息"],
+                     ["clsName": "UIViewController"],
                      ["clsName": "DiscoverViewController", "title": "发现", "imageName": "发现"],
                      ["clsName": "ProfileViewController", "title": "我", "imageName": "我的"]
                      ]
@@ -76,6 +86,22 @@ class MainViewController: UITabBarController {
         let nav = NavigationController(rootViewController: vc)
         
         return nav
+    }
+    
+    //MARK: - 设置中间button
+    fileprivate func setupComposeButton() {
+        
+        //1 添加到tabbar
+        tabBar.addSubview(composeButton)
+        
+        //2 计算按钮位置
+        let count: CGFloat = CGFloat(childViewControllers.count)
+        let w = tabBar.bounds.width / count - 1
+        composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+    }
+    
+    @objc fileprivate func composeButtonClick() {
+        
     }
 
 }

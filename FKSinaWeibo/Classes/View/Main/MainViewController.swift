@@ -10,6 +10,9 @@ import UIKit
 
 let KDarkOrigin: (CGFloat,CGFloat,CGFloat) = (255.0, 140.0, 0)
 
+let screenWidth = UIScreen.main.bounds.width
+let screenHeight = UIScreen.main.bounds.height
+
 class MainViewController: UITabBarController {
 
     
@@ -17,6 +20,7 @@ class MainViewController: UITabBarController {
         let button = UIButton()
         button.setImage(UIImage(named: "composeButton"), for: .normal)
         button.addTarget(self, action: #selector(composeButtonClick), for: .touchUpInside)
+        button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
     

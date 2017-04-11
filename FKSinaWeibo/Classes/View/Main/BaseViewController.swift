@@ -12,8 +12,13 @@ let KBarTintColor: (CGFloat,CGFloat,CGFloat) = (245, 245 ,245)
 
 class BaseViewController: UIViewController {
 
+    /// 表格视图
+    var tableView: UITableView?
+    
+    /// 自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 64.0))
     
+    /// 自定义导航条目
     lazy var navItem: UINavigationItem = UINavigationItem()
     
     override var title: String? {
@@ -27,6 +32,23 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: CGFloat(arc4random() % 255) / 255.0, blue: CGFloat(arc4random() % 255) / 255.0, alpha: 1)
         
+        setupnavigationBar()
+        
+        setupTableView()
+
+    }
+    
+    //MARK: 设置tableView
+    public func setupTableView() {
+        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+    }
+    
+    //MARK: 设置导航条
+    public func setupnavigationBar() {
+        
         //添加自定义bar
         view.addSubview(navigationBar)
         
@@ -37,6 +59,6 @@ class BaseViewController: UIViewController {
         navigationBar.barTintColor = UIColor(red: KBarTintColor.0 / 255.0, green: KBarTintColor.1 / 255.0, blue: KBarTintColor.2 / 255.0, alpha: 1)
         
         //bar字体颜色
-            navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
 }

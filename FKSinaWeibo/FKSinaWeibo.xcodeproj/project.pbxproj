@@ -27,6 +27,8 @@
 		46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0861E9B9DF700B2AA34 /* composeButton.png */; };
 		46F7F08B1E9C8F8E00B2AA34 /* bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */; };
 		46F7F08D1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */; };
+		46F7F0911E9CD25900B2AA34 /* 返回-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F08F1E9CD25900B2AA34 /* 返回-highlighted.png */; };
+		46F7F0921E9CD25900B2AA34 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0901E9CD25900B2AA34 /* 返回.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		46F7F0861E9B9DF700B2AA34 /* composeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = composeButton.png; sourceTree = "<group>"; };
 		46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "bundle+extension.swift"; sourceTree = "<group>"; };
 		46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		46F7F08F1E9CD25900B2AA34 /* 返回-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回-highlighted.png"; sourceTree = "<group>"; };
+		46F7F0901E9CD25900B2AA34 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		4649DFEE1E98FB350015C1A3 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				46F7F08E1E9CD25100B2AA34 /* BackImage */,
 				4649DFEF1E98FB3F0015C1A3 /* tabbarICON */,
 			);
 			name = image;
@@ -211,6 +216,15 @@
 				46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		46F7F08E1E9CD25100B2AA34 /* BackImage */ = {
+			isa = PBXGroup;
+			children = (
+				46F7F08F1E9CD25900B2AA34 /* 返回-highlighted.png */,
+				46F7F0901E9CD25900B2AA34 /* 返回.png */,
+			);
+			path = BackImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,9 +294,11 @@
 				4649DFF91E98FB3F0015C1A3 /* 信息.png in Resources */,
 				4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */,
 				4649DFFA1E98FB3F0015C1A3 /* 发现-black.png in Resources */,
+				46F7F0921E9CD25900B2AA34 /* 返回.png in Resources */,
 				4649DFF81E98FB3F0015C1A3 /* 信息-black.png in Resources */,
 				4649DFFF1E98FB3F0015C1A3 /* 首页.png in Resources */,
 				4649DFFD1E98FB3F0015C1A3 /* 我的.png in Resources */,
+				46F7F0911E9CD25900B2AA34 /* 返回-highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,8 @@ class MainViewController: UITabBarController {
         setupChildControllers()
         
         setupComposeButton()
+        
+        tabBar.barTintColor = UIColor(red: KBarTintColor.0 / 255.0, green: KBarTintColor.1 / 255.0, blue: KBarTintColor.2 / 255.0, alpha: 1)
     }
 
     //MARK: 设置所有子控制器

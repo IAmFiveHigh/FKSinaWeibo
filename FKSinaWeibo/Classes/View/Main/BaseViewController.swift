@@ -8,6 +8,8 @@
 
 import UIKit
 
+let KBarTintColor: (CGFloat,CGFloat,CGFloat) = (245, 245 ,245)
+
 class BaseViewController: UIViewController {
 
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 64.0))
@@ -30,5 +32,11 @@ class BaseViewController: UIViewController {
         
         //bar添加自定义item
         navigationBar.items = [navItem]
+        
+        //bar渲染颜色
+        navigationBar.barTintColor = UIColor(red: KBarTintColor.0 / 255.0, green: KBarTintColor.1 / 255.0, blue: KBarTintColor.2 / 255.0, alpha: 1)
+        
+        //bar字体颜色
+            navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
 }

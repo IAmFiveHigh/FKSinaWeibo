@@ -32,6 +32,13 @@ class MainViewController: UITabBarController {
         setupComposeButton()
         
         tabBar.barTintColor = UIColor(red: KBarTintColor.0 / 255.0, green: KBarTintColor.1 / 255.0, blue: KBarTintColor.2 / 255.0, alpha: 1)
+
+    }
+    
+    //MARK: 设置设备方向 竖屏
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
+        return .portrait
     }
 
     //MARK: 设置所有子控制器

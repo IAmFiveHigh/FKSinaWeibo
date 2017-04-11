@@ -106,9 +106,4 @@ class MainViewController: UITabBarController {
 
 }
 
-extension Bundle {
-    
-    var nameSpace: String {
-        return infoDictionary?["CFBundleName"] as? String ?? ""
-    }
-}
+

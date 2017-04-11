@@ -25,6 +25,8 @@
 		4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF61E98FB3F0015C1A3 /* 首页-black.png */; };
 		4649DFFF1E98FB3F0015C1A3 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF71E98FB3F0015C1A3 /* 首页.png */; };
 		46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0861E9B9DF700B2AA34 /* composeButton.png */; };
+		46F7F08B1E9C8F8E00B2AA34 /* bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */; };
+		46F7F08D1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		4649DFF61E98FB3F0015C1A3 /* 首页-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页-black.png"; sourceTree = "<group>"; };
 		4649DFF71E98FB3F0015C1A3 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
 		46F7F0861E9B9DF700B2AA34 /* composeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = composeButton.png; sourceTree = "<group>"; };
+		46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "bundle+extension.swift"; sourceTree = "<group>"; };
+		46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		4649DFD81E98EC540015C1A3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				46F7F0891E9C8F7C00B2AA34 /* Extension */,
 				4649DFEE1E98FB350015C1A3 /* image */,
 			);
 			path = Tools;
@@ -199,6 +204,15 @@
 			path = tabbarICON;
 			sourceTree = "<group>";
 		};
+		46F7F0891E9C8F7C00B2AA34 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */,
+				46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,9 +295,11 @@
 			files = (
 				4649DFED1E98ECF80015C1A3 /* DiscoverViewController.swift in Sources */,
 				4649DFE51E98ECB60015C1A3 /* BaseViewController.swift in Sources */,
+				46F7F08D1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift in Sources */,
 				4649DFE11E98EC8C0015C1A3 /* MainViewController.swift in Sources */,
 				4649DFE31E98ECA70015C1A3 /* NavigationController.swift in Sources */,
 				4649DFC51E98E47C0015C1A3 /* AppDelegate.swift in Sources */,
+				46F7F08B1E9C8F8E00B2AA34 /* bundle+extension.swift in Sources */,
 				4649DFE71E98ECDC0015C1A3 /* HomeViewController.swift in Sources */,
 				4649DFEB1E98ECEF0015C1A3 /* ProfileViewController.swift in Sources */,
 				4649DFE91E98ECE70015C1A3 /* MessageViewController.swift in Sources */,

@@ -32,6 +32,8 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: CGFloat(arc4random() % 255) / 255.0, blue: CGFloat(arc4random() % 255) / 255.0, alpha: 1)
         
+        automaticallyAdjustsScrollViewInsets = false
+        
         setupUI()
         
     }
@@ -55,6 +57,11 @@ class BaseViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.delegate = self
         
+        //设置tableView缩进
+        tableView?.contentInset = UIEdgeInsets(top: navigationBar.height(),
+                                               left: 0,
+                                               bottom: tabBarController?.tabBar.height() ?? 0,
+                                               right: 0)
     }
     
     //MARK: 设置导航条

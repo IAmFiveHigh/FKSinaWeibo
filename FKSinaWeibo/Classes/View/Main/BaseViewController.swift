@@ -15,6 +15,9 @@ class BaseViewController: UIViewController {
     /// 表格视图
     var tableView: UITableView?
     
+    /// 刷新控件
+    var refreshControl: UIRefreshControl?
+    
     /// 自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 64.0))
     
@@ -62,6 +65,14 @@ class BaseViewController: UIViewController {
                                                left: 0,
                                                bottom: tabBarController?.tabBar.height() ?? 0,
                                                right: 0)
+        //设置刷新控件
+        refreshControl = UIRefreshControl()
+        
+        tableView?.addSubview(refreshControl!)
+        
+        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        
+        refreshControl?.tintColor = UIColor.orange
     }
     
     //MARK: 设置导航条
@@ -78,6 +89,11 @@ class BaseViewController: UIViewController {
         
         //bar字体颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+    }
+    
+    func loadData() {
+        
+        
     }
 }
 

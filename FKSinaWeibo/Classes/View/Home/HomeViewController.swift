@@ -13,9 +13,10 @@ private let cellID = "homeCellID"
 
 class HomeViewController: BaseViewController {
 
+    fileprivate var dataArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
@@ -23,6 +24,9 @@ class HomeViewController: BaseViewController {
         
         super.setupUI()
         
+        //tableView注册cell
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+
         navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", fontSize: 15, target: self, action: #selector(registButtonClick))
         
         navItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", fontSize: 15, target: self, action: #selector(loginButtonClick))
@@ -37,4 +41,37 @@ class HomeViewController: BaseViewController {
     @objc fileprivate func loginButtonClick() {
         
     }
+    
+    override func loadData() {
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: {
+            for index in 0..<15 {
+                
+                self.dataArray.insert(index.description, at: 0)
+            }
+            
+            //结束刷新
+            self.refreshControl?.endRefreshing()
+            
+            //tableView刷新UI
+            self.tableView?.reloadData()
+        })
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return dataArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        
+        cell.textLabel?.text = dataArray[indexPath.row]
+        
+        return cell
+    }
 }
+
+

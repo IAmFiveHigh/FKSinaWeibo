@@ -32,10 +32,17 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: CGFloat(arc4random() % 255) / 255.0, blue: CGFloat(arc4random() % 255) / 255.0, alpha: 1)
         
+        setupUI()
+        
+    }
+    
+    
+    func setupUI() {
+        
         setupnavigationBar()
         
         setupTableView()
-
+        
     }
     
     //MARK: 设置tableView
@@ -44,6 +51,10 @@ class BaseViewController: UIViewController {
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
+        
+        tableView?.dataSource = self
+        tableView?.delegate = self
+        
     }
     
     //MARK: 设置导航条
@@ -60,5 +71,20 @@ class BaseViewController: UIViewController {
         
         //bar字体颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+    }
+}
+
+extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
+        return UITableViewCell()
     }
 }

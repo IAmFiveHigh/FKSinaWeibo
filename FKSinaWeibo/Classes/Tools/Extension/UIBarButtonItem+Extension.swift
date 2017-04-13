@@ -21,10 +21,12 @@ extension UIBarButtonItem {
     convenience init(title: String, fontSize: CGFloat = 16, target: Any?, action: Selector, isBackButton: Bool = false) {
         
         let btn = UIButton()
+        btn.setWidth(50)
+        btn.setHeight(32)
         btn.setTitle(title, for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         btn.addTarget(target, action: action, for: .touchUpInside)
-        btn.setTitleColor(UIColor.darkGray, for: .normal)
-        btn.setTitleColor(UIColor.orange, for: .highlighted)
+        btn.setTitleColor(UIColor.orange, for: .normal)
         
         if isBackButton {
             

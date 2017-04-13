@@ -29,6 +29,7 @@
 		46F7F08D1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */; };
 		46F7F0911E9CD25900B2AA34 /* 返回-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F08F1E9CD25900B2AA34 /* 返回-highlighted.png */; };
 		46F7F0921E9CD25900B2AA34 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0901E9CD25900B2AA34 /* 返回.png */; };
+		46F7F0FB1E9F83D300B2AA34 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F0FA1E9F83D300B2AA34 /* UIView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		46F7F08F1E9CD25900B2AA34 /* 返回-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回-highlighted.png"; sourceTree = "<group>"; };
 		46F7F0901E9CD25900B2AA34 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
+		46F7F0FA1E9F83D300B2AA34 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */,
 				46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */,
+				46F7F0FA1E9F83D300B2AA34 /* UIView+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				4649DFE71E98ECDC0015C1A3 /* HomeViewController.swift in Sources */,
 				4649DFEB1E98ECEF0015C1A3 /* ProfileViewController.swift in Sources */,
 				4649DFE91E98ECE70015C1A3 /* MessageViewController.swift in Sources */,
+				46F7F0FB1E9F83D300B2AA34 /* UIView+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

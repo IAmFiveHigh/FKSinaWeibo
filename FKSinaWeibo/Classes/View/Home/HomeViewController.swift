@@ -8,28 +8,33 @@
 
 import UIKit
 
+
+private let cellID = "homeCellID"
+
 class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func setupUI() {
+        
+        super.setupUI()
+        
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", fontSize: 15, target: self, action: #selector(registButtonClick))
+        
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登陆", fontSize: 15, target: self, action: #selector(loginButtonClick))
     }
-    */
-
+    
+    //注册
+    @objc fileprivate func registButtonClick() {
+        
+    }
+    
+    //登陆
+    @objc fileprivate func loginButtonClick() {
+        
+    }
 }

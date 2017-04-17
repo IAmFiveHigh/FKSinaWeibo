@@ -53,6 +53,9 @@ class HomeViewController: BaseViewController {
             //结束刷新
             self.refreshControl?.endRefreshing()
             
+            //上拉结束
+            self.isPullup = false
+            
             //tableView刷新UI
             self.tableView?.reloadData()
         })

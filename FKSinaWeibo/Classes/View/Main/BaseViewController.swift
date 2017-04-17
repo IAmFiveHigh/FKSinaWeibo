@@ -24,6 +24,9 @@ class BaseViewController: UIViewController {
     /// 自定义导航条目
     lazy var navItem: UINavigationItem = UINavigationItem()
     
+    /// 是否上拉
+    var isPullup: Bool = false
+    
     override var title: String? {
         didSet {
             navItem.title = title
@@ -109,5 +112,29 @@ extension BaseViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         return UITableViewCell()
+    }
+    
+    /// 先是最后一行的时候 做上拉加载
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        //判断indexpath是否最后一行
+        let row = indexPath.row
+        
+        let section = tableView.numberOfSections - 1
+        
+        if row < 0 || section < 0 {
+            return
+        }
+        
+        let count = tableView.numberOfRows(inSection: section)
+        
+        if row == (count - 1) && !isPullup{
+            
+            print("上拉了")
+            isPullup = true
+            
+            //开始
+            loadData()
+        }
     }
 }

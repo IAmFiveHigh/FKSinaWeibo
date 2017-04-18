@@ -96,7 +96,8 @@ class BaseViewController: UIViewController {
     
     func loadData() {
         
-        
+        //结束刷新
+        refreshControl?.endRefreshing()
     }
 }
 

@@ -12,6 +12,9 @@ let KBarTintColor: (CGFloat,CGFloat,CGFloat) = (245, 245 ,245)
 
 class BaseViewController: UIViewController {
 
+    /// 用户登录标记
+    var userLogon: Bool = false
+    
     /// 表格视图
     var tableView: UITableView?
     
@@ -36,7 +39,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(red: CGFloat(arc4random() % 255) / 255.0, green: CGFloat(arc4random() % 255) / 255.0, blue: CGFloat(arc4random() % 255) / 255.0, alpha: 1)
+        view.backgroundColor = UIColor.white
         
         automaticallyAdjustsScrollViewInsets = false
         
@@ -49,7 +52,8 @@ class BaseViewController: UIViewController {
         
         setupnavigationBar()
         
-        setupTableView()
+        // 用户登录加载tableView，否则visitorView
+        userLogon ? setupTableView() : setupVisitorView()
         
     }
     
@@ -76,6 +80,16 @@ class BaseViewController: UIViewController {
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         
         refreshControl?.tintColor = UIColor.orange
+    }
+    
+    //MARK: 设置visitorView
+    public func setupVisitorView() {
+        
+        let visitorView = UIView(frame: view.bounds)
+        
+        visitorView.backgroundColor = UIColor.white
+        
+        view.insertSubview(visitorView, belowSubview: navigationBar)
     }
     
     //MARK: 设置导航条

@@ -24,6 +24,7 @@
 		4649DFFD1E98FB3F0015C1A3 /* 我的.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF51E98FB3F0015C1A3 /* 我的.png */; };
 		4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF61E98FB3F0015C1A3 /* 首页-black.png */; };
 		4649DFFF1E98FB3F0015C1A3 /* 首页.png in Resources */ = {isa = PBXBuildFile; fileRef = 4649DFF71E98FB3F0015C1A3 /* 首页.png */; };
+		46C3A4881EA62EE500B71E5A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C3A4871EA62EE500B71E5A /* Launch Screen.storyboard */; };
 		46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F7F0861E9B9DF700B2AA34 /* composeButton.png */; };
 		46F7F08B1E9C8F8E00B2AA34 /* bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */; };
 		46F7F08D1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */; };
@@ -52,6 +53,7 @@
 		4649DFF51E98FB3F0015C1A3 /* 我的.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的.png"; sourceTree = "<group>"; };
 		4649DFF61E98FB3F0015C1A3 /* 首页-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页-black.png"; sourceTree = "<group>"; };
 		4649DFF71E98FB3F0015C1A3 /* 首页.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页.png"; sourceTree = "<group>"; };
+		46C3A4871EA62EE500B71E5A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		46F7F0861E9B9DF700B2AA34 /* composeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = composeButton.png; sourceTree = "<group>"; };
 		46F7F08A1E9C8F8E00B2AA34 /* bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "bundle+extension.swift"; sourceTree = "<group>"; };
 		46F7F08C1E9C8FAC00B2AA34 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				4649DFC41E98E47C0015C1A3 /* AppDelegate.swift */,
 				4649DFCB1E98E47C0015C1A3 /* Assets.xcassets */,
 				4649DFD01E98E47C0015C1A3 /* Info.plist */,
+				46C3A4871EA62EE500B71E5A /* Launch Screen.storyboard */,
 			);
 			path = FKSinaWeibo;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				4649DFFB1E98FB3F0015C1A3 /* 发现.png in Resources */,
 				4649DFCC1E98E47C0015C1A3 /* Assets.xcassets in Resources */,
 				46F7F0871E9B9DF700B2AA34 /* composeButton.png in Resources */,
+				46C3A4881EA62EE500B71E5A /* Launch Screen.storyboard in Resources */,
 				4649DFF91E98FB3F0015C1A3 /* 信息.png in Resources */,
 				4649DFFE1E98FB3F0015C1A3 /* 首页-black.png in Resources */,
 				4649DFFA1E98FB3F0015C1A3 /* 发现-black.png in Resources */,

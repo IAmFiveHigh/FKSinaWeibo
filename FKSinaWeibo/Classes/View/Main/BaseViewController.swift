@@ -108,6 +108,7 @@ class BaseViewController: UIViewController {
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
     }
     
+    //加载数据
     func loadData() {
         
         //结束刷新
